@@ -1,0 +1,7 @@
+# Ignore the entire data folder
+archive/
+
+# System files
+prompt.md
+
+# Also ignore these file types anywhere in the project
