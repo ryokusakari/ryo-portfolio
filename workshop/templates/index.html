@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Initialise page design and import stylesheet -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ryo Kusakari</title>
@@ -8,9 +9,11 @@
 </head>
 <body>
     <header>
+        <!-- Create header with logo + directory -->
         <nav>
-            <a href="#home">Ryo Kusakari</a>
-            <div>
+            <a class="logo" href="#home">Ryo Kusakari</a>
+
+            <div class="nav-links">
                 <a href="#projects">Projects</a>
                 <a href="#experience">Experience</a>
                 <a href="#contact">Contact</a>
@@ -18,12 +21,14 @@
         </nav>
     </header>
     <main id="home">
+        <!-- Create introductory home section -->
         <section>
             <p>Hello, I am</p>
             <h1>Ryo Kusakari</h1>
             <p>I am building a portfolio website to share my projects, experience, and learning journey.</p>
         </section> 
 
+        <!-- Introduce projects -->
         <section id="projects">
             <h2>Projects</h2>
             <article>
@@ -37,6 +42,7 @@
             </article>
         </section>
 
+        <!-- Introduce experience -->
         <section id="experience">
             <h2>Experience</h2>
             <article>
@@ -50,6 +56,7 @@
             </article>
         </section>
 
+        <!-- Create input field for message -->
         <section id="contact">
             <h2>Contact</h2>
             <form>
@@ -68,9 +75,11 @@
 
     </main>
     <footer>
+        <!-- Create footer -->
         <p>&copy; 2026 Ryo Kusakari. Built while learning full-stack web development.</p>
     </footer>
 
+    <!-- Link and run javascript code -->
     <script src="../static/js/main.js"></script>
 </body>
 </html>
