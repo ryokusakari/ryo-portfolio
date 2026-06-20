@@ -110,6 +110,12 @@ button:hover {
     background: #1e40af;
 }
 
+.form-response {
+    margin-top: 16px;
+    color: #374151;
+    font-weight: 700;
+}
+
 /* Footer */
 footer {
     padding: 24px 20px;
