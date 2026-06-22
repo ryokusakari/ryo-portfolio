@@ -2,7 +2,7 @@ const contactForm = document.querySelector("form");
 const contactName = document.querySelector("#contact-name");
 const contactResponse = document.querySelector("#contact-response");
 
-contactForm.addEventListener("submit", function (event) {
+contactForm.addEventListener("submit", async function (event) {
     event.preventDefault();
     const name = contactName.value.trim();
 
@@ -11,6 +11,25 @@ contactForm.addEventListener("submit", function (event) {
         return;
     }
 
-    contactResponse.textContent = "Thanks, " + name + ". Your message was received in the browser.";
-    contactForm.reset();
+    try{
+        const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name: name }),
+        });
+
+        const result = await response.json();
+
+        if (!response.ok){
+            contactResponse.textContent = result.error;
+            return;
+        }
+
+        contactResponse.textContent = result.message;
+        contactForm.reset();
+    } catch (error) {
+        contactResponse.textContent = "Something went wrong. Please try again.";
+    }
 });

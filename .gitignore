@@ -3,5 +3,9 @@ archive/
 
 # System files
 prompt.md
+**/.venv/
+__pycache__/
+*.pyc
+.env
 
 # Also ignore these file types anywhere in the project
