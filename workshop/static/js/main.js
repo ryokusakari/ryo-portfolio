@@ -11,7 +11,7 @@ contactForm.addEventListener("submit", async function (event) {
         return;
     }
 
-    try{
+    try {
         const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -22,7 +22,7 @@ contactForm.addEventListener("submit", async function (event) {
 
         const result = await response.json();
 
-        if (!response.ok){
+        if (!response.ok) {
             contactResponse.textContent = result.error;
             return;
         }
