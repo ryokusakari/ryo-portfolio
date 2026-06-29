@@ -1,9 +1,5 @@
-CREATE DATABASE IF NOT EXISTS portfolio_db;
-
-USE portfolio_db;
-
 CREATE TABLE IF NOT EXISTS contact_messages (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(255),
     message TEXT,
